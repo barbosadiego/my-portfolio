@@ -1,10 +1,10 @@
-@import 'variables';
 @import 'functions';
+@import 'variables';
 
 body{
   background-color: $bg-color;
   font-family: 'Poppins', sans-serif;
-  color: $light;
+  color: $heading-dark;
 }
 
 .x-large{
@@ -25,4 +25,13 @@ body{
 .small{
   font-size: rem(16);
   line-height: rem(24);
+}
+
+img{
+  width: 100%;
+  display: block;
+}
+
+p{
+  color: $text-dark;
 }

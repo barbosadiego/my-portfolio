@@ -1,7 +1,7 @@
 body {
   background-color: #0C151D;
   font-family: "Poppins", sans-serif;
-  color: #ffffff;
+  color: #F1F2F4;
 }
 
 .x-large {
@@ -22,6 +22,15 @@ body {
 .small {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+p {
+  color: #A3ABB2;
 }
 
 /*# sourceMappingURL=style.css.map */
