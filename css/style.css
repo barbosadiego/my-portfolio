@@ -1,3 +1,27 @@
+body {
+  background-color: #0C151D;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+}
 
+.x-large {
+  font-size: 3rem;
+  line-height: 4.5rem;
+}
+
+.large {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+.normal {
+  font-size: 1.3125rem;
+  line-height: 2rem;
+}
+
+.small {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
 
 /*# sourceMappingURL=style.css.map */
