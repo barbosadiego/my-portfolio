@@ -1,6 +1,9 @@
 @use 'functions' as f;
 @use 'variables';
 
+*{
+  box-sizing: border-box;
+}
 
 .x-large{
   font-size: f.rem(48);
