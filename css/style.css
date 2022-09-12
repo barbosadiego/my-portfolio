@@ -148,13 +148,24 @@ body .content__tab-buttons {
   background-color: #142637;
   padding: 10px;
   border-radius: 5px;
+  position: relative;
 }
 body .content__tab-buttons .btn {
-  transition: all 0.3s;
-  background-color: #142637;
+  background-color: transparent;
+  z-index: 10;
 }
-body .content__tab-buttons .btn.active {
+body .content__tab-buttons .switch {
+  display: block;
+  position: absolute;
+  width: 9.875rem;
+  height: 2.75rem;
   background-color: #0C151D;
+  border-radius: 5px;
+  transition: 0.3s;
+  transform: translate3d(-84px, 0px, 0px);
+}
+body .content__tab-buttons .switch.active {
+  transform: translate3d(84px, 0px, 0px);
 }
 body .content__grid {
   overflow: hidden;

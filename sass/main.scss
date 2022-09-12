@@ -158,13 +158,25 @@ body{
       background-color: v.$base;
       padding: 10px;
       border-radius: v.$borderRadius;
+      position: relative;
       
       .btn{
-        transition: all .3s;
-        background-color: v.$base;
+        background-color: transparent;
+        z-index: 10;
+      }
+
+      .switch{
+        display: block;
+        position: absolute;
+        width: f.rem(158);
+        height: f.rem(44);
+        background-color: v.$bg-color;
+        border-radius: v.$borderRadius;
+        transition: .3s;
+        transform: translate3d(-84px, 0px, 0px);
 
         &.active{
-          background-color: v.$bg-color;
+          transform: translate3d(84px, 0px, 0px);
         }
       }
     }
