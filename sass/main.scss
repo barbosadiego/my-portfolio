@@ -171,11 +171,20 @@ body{
     &__grid{
       
       .portfolio{
-        display: grid;
+        display: none;
         grid-template-columns: 1fr;
         gap: 30px;
+        // width: 0px;
+        // height: 0px;
+        // visibility: hidden;
         @media screen and (min-width:768px) {
           grid-template-columns: repeat(2,1fr);
+        }
+        &.active{
+          display: grid;
+          // width: unset;
+          // height: unset;
+          // visibility: visible;
         }
 
         .item{
@@ -207,10 +216,12 @@ body{
       }
 
       .skill{
-        display: grid;
+        display: none;
         justify-content: center;
         gap: 30px;
-        width: 100%;
+        &.active{
+          display: grid;
+        }
 
         .item{
           display: flex;

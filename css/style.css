@@ -156,7 +156,7 @@ body .content__tab-buttons .btn.active {
   background-color: #0C151D;
 }
 body .content__grid .portfolio {
-  display: grid;
+  display: none;
   grid-template-columns: 1fr;
   gap: 30px;
 }
@@ -164,6 +164,9 @@ body .content__grid .portfolio {
   body .content__grid .portfolio {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+body .content__grid .portfolio.active {
+  display: grid;
 }
 body .content__grid .portfolio .item {
   overflow: hidden;
@@ -189,10 +192,12 @@ body .content__grid .portfolio .item .text h3 {
   text-transform: capitalize;
 }
 body .content__grid .skill {
-  display: grid;
+  display: none;
   justify-content: center;
   gap: 30px;
-  width: 100%;
+}
+body .content__grid .skill.active {
+  display: grid;
 }
 body .content__grid .skill .item {
   display: flex;
