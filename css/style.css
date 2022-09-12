@@ -150,15 +150,25 @@ body .content__tab-buttons {
   border-radius: 5px;
 }
 body .content__tab-buttons .btn {
+  transition: all 0.3s;
   background-color: #142637;
 }
 body .content__tab-buttons .btn.active {
   background-color: #0C151D;
 }
+body .content__grid {
+  overflow: hidden;
+}
 body .content__grid .portfolio {
-  display: none;
+  display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
+  transition: 0.5s;
+  width: 0px;
+  height: 0px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate3d(-50px, 0px, 0px);
 }
 @media screen and (min-width: 768px) {
   body .content__grid .portfolio {
@@ -166,7 +176,11 @@ body .content__grid .portfolio {
   }
 }
 body .content__grid .portfolio.active {
-  display: grid;
+  width: unset;
+  height: unset;
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
 }
 body .content__grid .portfolio .item {
   overflow: hidden;
@@ -192,12 +206,24 @@ body .content__grid .portfolio .item .text h3 {
   text-transform: capitalize;
 }
 body .content__grid .skill {
-  display: none;
+  display: grid;
   justify-content: center;
+  top: 0;
   gap: 30px;
+  width: 0px;
+  height: 0px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  transform: translate3d(50px, 0px, 0px);
 }
 body .content__grid .skill.active {
   display: grid;
+  width: unset;
+  height: unset;
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
 }
 body .content__grid .skill .item {
   display: flex;

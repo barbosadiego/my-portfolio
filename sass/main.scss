@@ -158,8 +158,9 @@ body{
       background-color: v.$base;
       padding: 10px;
       border-radius: v.$borderRadius;
-
+      
       .btn{
+        transition: all .3s;
         background-color: v.$base;
 
         &.active{
@@ -169,22 +170,28 @@ body{
     }
 
     &__grid{
+      overflow: hidden;
       
       .portfolio{
-        display: none;
+        display: grid;
         grid-template-columns: 1fr;
         gap: 30px;
-        // width: 0px;
-        // height: 0px;
-        // visibility: hidden;
+        transition: .5s;
+        width: 0px;
+        height: 0px;
+        visibility: hidden;
+        opacity: 0;
+        transform: translate3d(-50px, 0px, 0px);
         @media screen and (min-width:768px) {
           grid-template-columns: repeat(2,1fr);
         }
         &.active{
-          display: grid;
-          // width: unset;
-          // height: unset;
-          // visibility: visible;
+          width: unset;
+          height: unset;
+          visibility: visible;
+          opacity: 1;
+          transform: translate3d(0px, 0px, 0px);
+
         }
 
         .item{
@@ -216,11 +223,23 @@ body{
       }
 
       .skill{
-        display: none;
+        display: grid;
         justify-content: center;
+        top: 0;
         gap: 30px;
+        width: 0px;
+        height: 0px;
+        visibility: hidden;
+        opacity: 0;
+        transition: .5s;
+        transform: translate3d(50px, 0px, 0px);
         &.active{
           display: grid;
+          width: unset;
+          height: unset;
+          visibility: visible;
+          opacity: 1;
+          transform: translate3d(0px, 0px, 0px);
         }
 
         .item{
