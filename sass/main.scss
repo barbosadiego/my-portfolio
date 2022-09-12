@@ -1,30 +1,25 @@
-@import 'functions';
-@import 'variables';
+@use 'functions' as f;
+@use 'variables';
 
-body{
-  background-color: $bg-color;
-  font-family: 'Poppins', sans-serif;
-  color: $heading-dark;
-}
 
 .x-large{
-  font-size: rem(48);
-  line-height: rem(72);
+  font-size: f.rem(48);
+  line-height: f.rem(72);
 }
 
 .large{
-  font-size: rem(32);
-  line-height: rem(48);
+  font-size: f.rem(32);
+  line-height: f.rem(48);
 }
 
 .normal{
-  font-size: rem(21);
-  line-height: rem(32);
+  font-size: f.rem(21);
+  line-height: f.rem(32);
 }
 
 .small{
-  font-size: rem(16);
-  line-height: rem(24);
+  font-size: f.rem(16);
+  line-height: f.rem(24);
 }
 
 img{
@@ -33,5 +28,97 @@ img{
 }
 
 p{
-  color: $text-dark;
+  color: variables.$text-dark;
+}
+
+body, h1, h2, p, li, ul, a{
+  margin: 0px;
+  padding: 0px;
+}
+
+.btn{
+  border: none;
+  background-color: variables.$primary;
+  border-radius: 5px;
+  font-size: f.rem(16);
+  width: f.rem(158);
+  height: f.rem(44);
+  font-family: 'Poppins';
+
+  &.dark-btn{
+    background-color: variables.$base;
+    color: variables.$text-dark;
+  }
+}
+
+body{
+  background-color: variables.$bg-color;
+  font-family: 'Poppins', sans-serif;
+  color: variables.$heading-dark;
+  padding: 10px;
+
+  .header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__dark-toggle{
+      width: 48px;
+      height: 48px;
+      background-color: variables.$base;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      margin-bottom: 30px;
+
+      & svg{
+        width: 25px;
+      }
+    }
+
+    &__hero{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      img{
+        overflow: hidden;
+        background-color: variables.$primary;
+        width: 107px;
+        height: 107px;
+        border-radius: 50%;
+        margin-bottom: 48px;
+        display: flex;
+        box-shadow: 0px 0px 0px 4px variables.$base ,0px 0px 0px 8px variables.$primary;
+      }
+
+      .info{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .social{
+        display: flex;
+        gap: 26px;
+        margin-bottom: 30px;
+
+        & svg{
+          cursor: pointer;
+        }
+      }
+    }
+
+    &__links{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 48px;
+    }
+  }
 }
