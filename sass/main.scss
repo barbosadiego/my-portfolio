@@ -1,5 +1,5 @@
 @use 'functions' as f;
-@use 'variables';
+@use 'variables' as v;
 
 *{
   box-sizing: border-box;
@@ -31,33 +31,33 @@ img{
 }
 
 p{
-  color: variables.$text-dark;
+  color: v.$text-dark;
 }
 
-body, h1, h2, p, li, ul, a{
+body, h1, h2, h3, p, li, ul, a{
   margin: 0px;
   padding: 0px;
 }
 
 .btn{
   border: none;
-  background-color: variables.$primary;
-  border-radius: 5px;
+  background-color: v.$primary;
+  border-radius: v.$borderRadius;
   font-size: f.rem(16);
   width: f.rem(158);
   height: f.rem(44);
   font-family: 'Poppins';
 
   &.dark-btn{
-    background-color: variables.$base;
-    color: variables.$text-dark;
+    background-color: v.$base;
+    color: v.$text-dark;
   }
 }
 
 body{
-  background-color: variables.$bg-color;
+  background-color: v.$bg-color;
   font-family: 'Poppins', sans-serif;
-  color: variables.$heading-dark;
+  color: v.$heading-dark;
   padding: 10px;
 
   .header{
@@ -68,7 +68,7 @@ body{
     &__dark-toggle{
       width: 48px;
       height: 48px;
-      background-color: variables.$base;
+      background-color: v.$base;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -88,13 +88,13 @@ body{
       
       img{
         overflow: hidden;
-        background-color: variables.$primary;
+        background-color: v.$primary;
         width: 107px;
         height: 107px;
         border-radius: 50%;
         margin-bottom: 48px;
         display: flex;
-        box-shadow: 0px 0px 0px 4px variables.$base ,0px 0px 0px 8px variables.$primary;
+        box-shadow: 0px 0px 0px 4px v.$base ,0px 0px 0px 8px v.$primary;
       }
 
       .info{
@@ -122,6 +122,64 @@ body{
       justify-content: center;
       gap: 14px;
       margin-bottom: 48px;
+    }
+  }
+
+  .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    &__tab-buttons{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      background-color: v.$base;
+      padding: 10px;
+      border-radius: v.$borderRadius;
+
+      .btn{
+        background-color: v.$base;
+
+        &.active{
+          background-color: v.$bg-color;
+        }
+      }
+    }
+
+    &__grid{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+
+      .item{
+        overflow: hidden;
+        position: relative;
+        border-radius: v.$borderRadius;
+        
+        img{
+          border-radius: v.$borderRadius;
+        }
+
+        .text{
+          width: 110%;
+          position: absolute;
+          bottom: 11px;
+          left: -20px;
+          background-color: transparentize(v.$base, $amount: 0.09);
+          transform: rotate(-3deg);
+          padding: 5px 30px;
+          overflow: hidden;
+          text-align: center;
+
+          h3{
+            color: v.$primary;
+            text-transform: capitalize;
+          }
+        }
+      }
     }
   }
 }
