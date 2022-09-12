@@ -71,6 +71,9 @@ body{
       background-color: darken(v.$base, 3%);
     }
   }
+  @media screen and (min-width:768px) {
+    padding: 10px 30px;
+  }
 
   .header{
     display: flex;
@@ -166,36 +169,39 @@ body{
     }
 
     &__grid{
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 30px;
-      @media screen and (min-width:768px) {
-        grid-template-columns: repeat(2,1fr);
-      }
-
-      .item{
-        overflow: hidden;
-        position: relative;
-        border-radius: v.$borderRadius;
-        
-        img{
-          border-radius: v.$borderRadius;
+      
+      .portfolio{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        @media screen and (min-width:768px) {
+          grid-template-columns: repeat(2,1fr);
         }
 
-        .text{
-          width: 110%;
-          position: absolute;
-          bottom: 11px;
-          left: -20px;
-          background-color: transparentize(v.$base, $amount: 0.09);
-          transform: rotate(-3deg);
-          padding: 5px 30px;
+        .item{
           overflow: hidden;
-          text-align: center;
-
-          h3{
-            color: v.$primary;
-            text-transform: capitalize;
+          position: relative;
+          border-radius: v.$borderRadius;
+          
+          img{
+            border-radius: v.$borderRadius;
+          }
+  
+          .text{
+            width: 110%;
+            position: absolute;
+            bottom: 11px;
+            left: -20px;
+            background-color: transparentize(v.$base, $amount: 0.09);
+            transform: rotate(-3deg);
+            padding: 5px 30px;
+            overflow: hidden;
+            text-align: center;
+  
+            h3{
+              color: v.$primary;
+              text-transform: capitalize;
+            }
           }
         }
       }

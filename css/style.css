@@ -67,6 +67,11 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
   background-color: #101e2c;
 }
+@media screen and (min-width: 768px) {
+  body {
+    padding: 10px 30px;
+  }
+}
 body .header {
   display: flex;
   flex-direction: column;
@@ -150,25 +155,25 @@ body .content__tab-buttons .btn {
 body .content__tab-buttons .btn.active {
   background-color: #0C151D;
 }
-body .content__grid {
+body .content__grid .portfolio {
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
 }
 @media screen and (min-width: 768px) {
-  body .content__grid {
+  body .content__grid .portfolio {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-body .content__grid .item {
+body .content__grid .portfolio .item {
   overflow: hidden;
   position: relative;
   border-radius: 5px;
 }
-body .content__grid .item img {
+body .content__grid .portfolio .item img {
   border-radius: 5px;
 }
-body .content__grid .item .text {
+body .content__grid .portfolio .item .text {
   width: 110%;
   position: absolute;
   bottom: 11px;
@@ -179,7 +184,7 @@ body .content__grid .item .text {
   overflow: hidden;
   text-align: center;
 }
-body .content__grid .item .text h3 {
+body .content__grid .portfolio .item .text h3 {
   color: #f9d640;
   text-transform: capitalize;
 }
