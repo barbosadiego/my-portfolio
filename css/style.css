@@ -36,6 +36,11 @@ body, h1, h2, h3, p, li, ul, a {
   padding: 0px;
 }
 
+a {
+  text-decoration: none;
+  font-family: inherit;
+}
+
 .btn {
   border: none;
   background-color: #f9d640;
@@ -45,6 +50,11 @@ body, h1, h2, h3, p, li, ul, a {
   height: 2.75rem;
   font-family: "Poppins";
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #0C151D;
 }
 .btn.dark-btn {
   background-color: #142637;
