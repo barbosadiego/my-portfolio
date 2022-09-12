@@ -188,6 +188,32 @@ body .content__grid .portfolio .item .text h3 {
   color: #f9d640;
   text-transform: capitalize;
 }
+body .content__grid .skill {
+  display: grid;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+}
+body .content__grid .skill .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+}
+body .content__grid .skill .item svg {
+  width: 50px;
+}
+body .content__grid .skill .item h2 {
+  text-transform: uppercase;
+}
+body .content__grid .skill .item p {
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  max-width: 50ch;
+}
 body .footer {
   padding: 10px 0px;
 }

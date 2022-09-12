@@ -205,6 +205,36 @@ body{
           }
         }
       }
+
+      .skill{
+        display: grid;
+        justify-content: center;
+        gap: 30px;
+        width: 100%;
+
+        .item{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          padding: 20px;
+          & svg{
+            width: 50px;
+          }
+
+          h2{
+            text-transform: uppercase;
+          }
+
+          p{
+            text-align: center;
+            font-size: f.rem(14);
+            line-height: 1.4;
+            max-width: 50ch;
+          }
+        }
+      }
     }
   }
 
