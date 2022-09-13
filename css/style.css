@@ -31,7 +31,14 @@ p {
   color: #A3ABB2;
 }
 
-body, h1, h2, h3, p, li, ul, a {
+body,
+h1,
+h2,
+h3,
+p,
+li,
+ul,
+a {
   margin: 0px;
   padding: 0px;
 }
@@ -128,8 +135,16 @@ body .header__hero .social {
   gap: 26px;
   margin-bottom: 30px;
 }
-body .header__hero .social svg {
-  cursor: pointer;
+@media screen and (min-width: 1024px) {
+  body .header__hero .social a svg {
+    transition: 0.3s;
+  }
+  body .header__hero .social a svg:hover {
+    transform: scale(1.2);
+  }
+  body .header__hero .social a svg:hover path {
+    fill: #f9d640;
+  }
 }
 body .header__links {
   width: 100%;

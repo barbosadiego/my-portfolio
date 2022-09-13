@@ -1,50 +1,57 @@
 @use 'functions' as f;
 @use 'variables' as v;
 
-*{
+* {
   box-sizing: border-box;
 }
 
-.x-large{
+.x-large {
   font-size: f.rem(48);
   line-height: f.rem(72);
 }
 
-.large{
+.large {
   font-size: f.rem(32);
   line-height: f.rem(48);
 }
 
-.normal{
+.normal {
   font-size: f.rem(21);
   line-height: f.rem(32);
 }
 
-.small{
+.small {
   font-size: f.rem(16);
   line-height: f.rem(24);
 }
 
-img{
+img {
   width: 100%;
   display: block;
 }
 
-p{
+p {
   color: v.$text-dark;
 }
 
-body, h1, h2, h3, p, li, ul, a{
+body,
+h1,
+h2,
+h3,
+p,
+li,
+ul,
+a {
   margin: 0px;
   padding: 0px;
 }
 
-a{
+a {
   text-decoration: none;
   font-family: inherit;
 }
 
-.btn{
+.btn {
   border: none;
   background-color: v.$primary;
   border-radius: v.$borderRadius;
@@ -58,39 +65,39 @@ a{
   align-items: center;
   gap: 10px;
   color: v.$bg-color;
-  
-  &.dark-btn{
+
+  &.dark-btn {
     background-color: v.$base;
     color: v.$text-dark;
   }
 }
 
-body{
+body {
   background-color: v.$bg-color;
   font-family: 'Poppins', sans-serif;
   color: v.$heading-dark;
   padding: 10px;
-  &::-webkit-scrollbar{
+  &::-webkit-scrollbar {
     background-color: darken(v.$bg-color, $amount: 3%);
   }
-  &::-webkit-scrollbar-thumb{
+  &::-webkit-scrollbar-thumb {
     background-color: v.$base;
     border-radius: 5px;
 
-    &:hover{
+    &:hover {
       background-color: darken(v.$base, 3%);
     }
   }
-  @media screen and (min-width:768px) {
+  @media screen and (min-width: 768px) {
     padding: 10px 30px;
   }
 
-  .header{
+  .header {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    &__dark-toggle{
+    &__dark-toggle {
       width: 48px;
       height: 48px;
       background-color: v.$base;
@@ -101,17 +108,17 @@ body{
       margin-top: 20px;
       margin-bottom: 30px;
 
-      & svg{
+      & svg {
         width: 25px;
       }
     }
 
-    &__hero{
+    &__hero {
       display: flex;
       flex-direction: column;
       align-items: center;
-      
-      img{
+
+      img {
         overflow: hidden;
         background-color: v.$primary;
         width: 107px;
@@ -119,10 +126,10 @@ body{
         border-radius: 50%;
         margin-bottom: 48px;
         display: flex;
-        box-shadow: 0px 0px 0px 4px v.$base ,0px 0px 0px 8px v.$primary;
+        box-shadow: 0px 0px 0px 4px v.$base, 0px 0px 0px 8px v.$primary;
       }
 
-      .info{
+      .info {
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -130,18 +137,27 @@ body{
         gap: 20px;
       }
 
-      .social{
+      .social {
         display: flex;
         gap: 26px;
         margin-bottom: 30px;
 
-        & svg{
-          cursor: pointer;
+        @media screen and (min-width: 1024px) {
+          a svg {
+            transition: 0.3s;
+
+            &:hover {
+              transform: scale(1.2);
+              path {
+                fill: v.$primary;
+              }
+            }
+          }
         }
       }
     }
 
-    &__links{
+    &__links {
       width: 100%;
       display: flex;
       justify-content: center;
@@ -150,7 +166,7 @@ body{
     }
   }
 
-  .content{
+  .content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -160,7 +176,7 @@ body{
       margin: 0 auto;
     }
 
-    &__tab-buttons{
+    &__tab-buttons {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -169,63 +185,62 @@ body{
       padding: 10px;
       border-radius: v.$borderRadius;
       position: relative;
-      
-      .btn{
+
+      .btn {
         background-color: transparent;
         z-index: 10;
       }
 
-      .switch{
+      .switch {
         display: block;
         position: absolute;
         width: f.rem(158);
         height: f.rem(44);
         background-color: v.$bg-color;
         border-radius: v.$borderRadius;
-        transition: .3s;
+        transition: 0.3s;
         transform: translate3d(-84px, 0px, 0px);
 
-        &.active{
+        &.active {
           transform: translate3d(84px, 0px, 0px);
         }
       }
     }
 
-    &__grid{
+    &__grid {
       overflow: hidden;
-      
-      .portfolio{
+
+      .portfolio {
         display: grid;
         grid-template-columns: 1fr;
         gap: 30px;
-        transition: .5s;
+        transition: 0.5s;
         width: 0px;
         height: 0px;
         visibility: hidden;
         opacity: 0;
         transform: translate3d(-50px, 0px, 0px);
-        @media screen and (min-width:768px) {
-          grid-template-columns: repeat(2,1fr);
+        @media screen and (min-width: 768px) {
+          grid-template-columns: repeat(2, 1fr);
         }
-        &.active{
+        &.active {
           width: unset;
           height: unset;
           visibility: visible;
           opacity: 1;
           transform: translate3d(0px, 0px, 0px);
-
         }
 
-        .item{
+        .item {
           overflow: hidden;
           position: relative;
           border-radius: v.$borderRadius;
-          
-          img{
+
+          img {
             border-radius: v.$borderRadius;
           }
-  
-          .text{
+
+          .text {
             width: 110%;
             position: absolute;
             bottom: 11px;
@@ -235,8 +250,8 @@ body{
             padding: 5px 30px;
             overflow: hidden;
             text-align: center;
-  
-            h3{
+
+            h3 {
               color: v.$primary;
               text-transform: capitalize;
             }
@@ -244,7 +259,7 @@ body{
         }
       }
 
-      .skill{
+      .skill {
         display: grid;
         justify-content: center;
         top: 0;
@@ -253,9 +268,9 @@ body{
         height: 0px;
         visibility: hidden;
         opacity: 0;
-        transition: .5s;
+        transition: 0.5s;
         transform: translate3d(50px, 0px, 0px);
-        &.active{
+        &.active {
           display: grid;
           width: unset;
           height: unset;
@@ -264,22 +279,22 @@ body{
           transform: translate3d(0px, 0px, 0px);
         }
 
-        .item{
+        .item {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           gap: 10px;
           padding: 20px;
-          & svg{
+          & svg {
             width: 50px;
           }
 
-          h2{
+          h2 {
             text-transform: uppercase;
           }
 
-          p{
+          p {
             text-align: center;
             font-size: f.rem(14);
             line-height: 1.4;
@@ -290,9 +305,9 @@ body{
     }
   }
 
-  .footer{
+  .footer {
     padding: 10px 0px;
-    p{
+    p {
       margin-top: 30px;
       text-align: center;
     }
