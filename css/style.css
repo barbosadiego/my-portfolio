@@ -73,33 +73,33 @@ a {
   color: #A3ABB2;
 }
 
-body {
+.js body {
   background-color: #0C151D;
   font-family: "Poppins", sans-serif;
   color: #F1F2F4;
   padding: 10px;
 }
-body::-webkit-scrollbar {
+.js body::-webkit-scrollbar {
   background-color: #080d12;
 }
-body::-webkit-scrollbar-thumb {
+.js body::-webkit-scrollbar-thumb {
   background-color: #142637;
   border-radius: 5px;
 }
-body::-webkit-scrollbar-thumb:hover {
+.js body::-webkit-scrollbar-thumb:hover {
   background-color: #101e2c;
 }
 @media screen and (min-width: 768px) {
-  body {
+  .js body {
     padding: 10px 30px;
   }
 }
-body .header {
+.js body .header {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-body .header__dark-toggle {
+.js body .header__dark-toggle {
   width: 48px;
   height: 48px;
   background-color: #142637;
@@ -110,15 +110,15 @@ body .header__dark-toggle {
   margin-top: 20px;
   margin-bottom: 30px;
 }
-body .header__dark-toggle svg {
+.js body .header__dark-toggle svg {
   width: 25px;
 }
-body .header__hero {
+.js body .header__hero {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-body .header__hero img {
+.js body .header__hero img {
   overflow: hidden;
   background-color: #f9d640;
   width: 107px;
@@ -128,49 +128,49 @@ body .header__hero img {
   display: flex;
   box-shadow: 0px 0px 0px 4px #142637, 0px 0px 0px 8px #f9d640;
 }
-body .header__hero .info {
+.js body .header__hero .info {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
-body .header__hero .social {
+.js body .header__hero .social {
   display: flex;
   gap: 26px;
   margin-bottom: 30px;
 }
 @media screen and (min-width: 1024px) {
-  body .header__hero .social a svg {
+  .js body .header__hero .social a svg {
     transition: 0.3s;
   }
-  body .header__hero .social a svg:hover {
+  .js body .header__hero .social a svg:hover {
     transform: scale(1.2);
   }
-  body .header__hero .social a svg:hover path {
+  .js body .header__hero .social a svg:hover path {
     fill: #f9d640;
   }
 }
-body .header__links {
+.js body .header__links {
   width: 100%;
   display: flex;
   justify-content: center;
   gap: 14px;
   margin-bottom: 48px;
 }
-body .content {
+.js body .content {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
 }
 @media screen and (min-width: 1024px) {
-  body .content {
+  .js body .content {
     max-width: 800px;
     margin: 0 auto;
   }
 }
-body .content__tab-buttons {
+.js body .content__tab-buttons {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -180,11 +180,11 @@ body .content__tab-buttons {
   border-radius: 5px;
   position: relative;
 }
-body .content__tab-buttons .btn {
+.js body .content__tab-buttons .btn {
   background-color: transparent;
   z-index: 10;
 }
-body .content__tab-buttons .switch {
+.js body .content__tab-buttons .switch {
   display: block;
   position: absolute;
   width: 9.875rem;
@@ -194,13 +194,13 @@ body .content__tab-buttons .switch {
   transition: 0.3s;
   transform: translate3d(-84px, 0px, 0px);
 }
-body .content__tab-buttons .switch.active {
+.js body .content__tab-buttons .switch.active {
   transform: translate3d(84px, 0px, 0px);
 }
-body .content__grid {
+.js body .content__grid {
   overflow: hidden;
 }
-body .content__grid .portfolio {
+.js body .content__grid .portfolio {
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
@@ -212,26 +212,26 @@ body .content__grid .portfolio {
   transform: translate3d(-50px, 0px, 0px);
 }
 @media screen and (min-width: 768px) {
-  body .content__grid .portfolio {
+  .js body .content__grid .portfolio {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-body .content__grid .portfolio.active {
+.js body .content__grid .portfolio.active {
   width: unset;
   height: unset;
   visibility: visible;
   opacity: 1;
   transform: translate3d(0px, 0px, 0px);
 }
-body .content__grid .portfolio .item {
+.js body .content__grid .portfolio .item {
   overflow: hidden;
   position: relative;
   border-radius: 5px;
 }
-body .content__grid .portfolio .item img {
+.js body .content__grid .portfolio .item img {
   border-radius: 5px;
 }
-body .content__grid .portfolio .item .text {
+.js body .content__grid .portfolio .item .text {
   width: 110%;
   position: absolute;
   bottom: 11px;
@@ -242,11 +242,11 @@ body .content__grid .portfolio .item .text {
   overflow: hidden;
   text-align: center;
 }
-body .content__grid .portfolio .item .text h3 {
+.js body .content__grid .portfolio .item .text h3 {
   color: #f9d640;
   text-transform: capitalize;
 }
-body .content__grid .skill {
+.js body .content__grid .skill {
   display: grid;
   justify-content: center;
   top: 0;
@@ -258,7 +258,7 @@ body .content__grid .skill {
   transition: 0.5s;
   transform: translate3d(50px, 0px, 0px);
 }
-body .content__grid .skill.active {
+.js body .content__grid .skill.active {
   display: grid;
   width: unset;
   height: unset;
@@ -266,7 +266,7 @@ body .content__grid .skill.active {
   opacity: 1;
   transform: translate3d(0px, 0px, 0px);
 }
-body .content__grid .skill .item {
+.js body .content__grid .skill .item {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -274,22 +274,22 @@ body .content__grid .skill .item {
   gap: 10px;
   padding: 20px;
 }
-body .content__grid .skill .item svg {
+.js body .content__grid .skill .item svg {
   width: 50px;
 }
-body .content__grid .skill .item h2 {
+.js body .content__grid .skill .item h2 {
   text-transform: uppercase;
 }
-body .content__grid .skill .item p {
+.js body .content__grid .skill .item p {
   text-align: center;
   font-size: 0.875rem;
   line-height: 1.4;
   max-width: 50ch;
 }
-body .footer {
+.js body .footer {
   padding: 10px 0px;
 }
-body .footer p {
+.js body .footer p {
   margin-top: 30px;
   text-align: center;
 }
