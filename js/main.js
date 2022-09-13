@@ -1,4 +1,4 @@
-const items = document.querySelectorAll("[data-content] > div");
+const items = document.querySelectorAll("[data-content] > ul");
 const buttons = document.querySelectorAll("[data-buttons] > button");
 const switchButton = document.querySelector("[data-switch]");
 

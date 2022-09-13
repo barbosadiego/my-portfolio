@@ -46,6 +46,11 @@ a {
   padding: 0px;
 }
 
+ul,
+li{
+  list-style: none;
+}
+
 a {
   text-decoration: none;
   font-family: inherit;
@@ -210,7 +215,7 @@ body {
     &__grid {
       overflow: hidden;
 
-      .portfolio {
+      .portfolio{
         display: grid;
         grid-template-columns: 1fr;
         gap: 30px;
@@ -231,7 +236,7 @@ body {
           transform: translate3d(0px, 0px, 0px);
         }
 
-        .item {
+        .item{
           overflow: hidden;
           position: relative;
           border-radius: v.$borderRadius;
@@ -245,7 +250,7 @@ body {
             position: absolute;
             bottom: 11px;
             left: -20px;
-            background-color: transparentize(v.$base, $amount: 0.09);
+            background-color: transparentize(v.$base, $amount: 0.01);
             transform: rotate(-3deg);
             padding: 5px 30px;
             overflow: hidden;

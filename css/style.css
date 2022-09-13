@@ -43,6 +43,11 @@ a {
   padding: 0px;
 }
 
+ul,
+li {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
   font-family: inherit;
@@ -231,7 +236,7 @@ body .content__grid .portfolio .item .text {
   position: absolute;
   bottom: 11px;
   left: -20px;
-  background-color: rgba(20, 38, 55, 0.91);
+  background-color: rgba(20, 38, 55, 0.99);
   transform: rotate(-3deg);
   padding: 5px 30px;
   overflow: hidden;
