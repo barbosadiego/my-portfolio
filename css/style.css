@@ -341,9 +341,16 @@ a {
 .js body .footer {
   padding: 10px 0px;
 }
-.js body .footer p {
+.js body .footer .info {
   margin-top: 30px;
+  margin-bottom: 10px;
   text-align: center;
+}
+.js body .footer .credits {
+  display: block;
+  color: #575757;
+  text-align: center;
+  font-size: 0.875rem;
 }
 
 /*# sourceMappingURL=style.css.map */

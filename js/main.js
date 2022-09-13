@@ -48,3 +48,9 @@ function checkDark() {
 }
 
 checkDark();
+
+//footer date
+const dateEl = document.querySelector('[data-time]');
+const atualDate = new Date().getFullYear();
+dateEl.innerHTML = atualDate
+
