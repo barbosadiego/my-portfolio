@@ -84,6 +84,21 @@ a {
   padding: 10px;
   transition: 0.3s;
 }
+.js body::-webkit-scrollbar {
+  background-color: #ffffff;
+}
+.js body::-webkit-scrollbar-thumb {
+  background-color: #cccccc;
+  border-radius: 5px;
+}
+.js body::-webkit-scrollbar-thumb:hover {
+  background-color: #b3b3b3;
+}
+@media screen and (min-width: 768px) {
+  .js body {
+    padding: 10px 30px;
+  }
+}
 .js body.dark {
   color: #F1F2F4;
   background-color: #0C151D;
@@ -120,20 +135,15 @@ a {
 .js body.dark .content__grid .text h3 {
   color: #f9d640 !important;
 }
-.js body::-webkit-scrollbar {
+.js body.dark::-webkit-scrollbar {
   background-color: #080d12;
 }
-.js body::-webkit-scrollbar-thumb {
+.js body.dark::-webkit-scrollbar-thumb {
   background-color: #142637;
   border-radius: 5px;
 }
-.js body::-webkit-scrollbar-thumb:hover {
+.js body.dark::-webkit-scrollbar-thumb:hover {
   background-color: #101e2c;
-}
-@media screen and (min-width: 768px) {
-  .js body {
-    padding: 10px 30px;
-  }
 }
 .js body .header {
   display: flex;

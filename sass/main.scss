@@ -88,6 +88,21 @@ a {
   padding: 10px;
   transition: .3s;
 
+  &::-webkit-scrollbar {
+    background-color: v.$light;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: darken($color: v.$light, $amount: 20%);
+    border-radius: 5px;
+    
+    &:hover {
+      background-color: darken(v.$light, 30%);
+    }
+  }
+  @media screen and (min-width: 768px) {
+    padding: 10px 30px;
+  }
+  
   //dark mode
   &.dark{
     color: v.$heading-dark;
@@ -144,21 +159,18 @@ a {
         }
       }
     }
-  }
 
-  &::-webkit-scrollbar {
-    background-color: darken(v.$bg-color, $amount: 3%);
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: v.$base;
-    border-radius: 5px;
-
-    &:hover {
-      background-color: darken(v.$base, 3%);
+    &::-webkit-scrollbar {
+      background-color: darken(v.$bg-color, $amount: 3%);
     }
-  }
-  @media screen and (min-width: 768px) {
-    padding: 10px 30px;
+    &::-webkit-scrollbar-thumb {
+      background-color: v.$base;
+      border-radius: 5px;
+      
+      &:hover {
+        background-color: darken(v.$base, 3%);
+      }
+    }
   }
 
   .header {
