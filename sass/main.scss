@@ -31,7 +31,11 @@ img {
 }
 
 p {
-  color: v.$text-dark;
+  color: v.$text-light;
+}
+
+svg path{
+  fill: v.$text-light !important;
 }
 
 body,
@@ -72,16 +76,76 @@ a {
   color: v.$bg-color;
 
   &.dark-btn {
-    background-color: v.$base;
-    color: v.$text-dark;
+    background-color: v.$light;
+    color: v.$text-light;
   }
 }
 
 .js body {
-  background-color: v.$bg-color;
+  background-color: v.$bg-color-light;
   font-family: 'Poppins', sans-serif;
-  color: v.$heading-dark;
+  color: v.$heading-light;
   padding: 10px;
+  transition: .3s;
+
+  //dark mode
+  &.dark{
+    color: v.$heading-dark;
+    background-color: v.$bg-color;
+
+    & p{
+      color: v.$text-dark;
+    }
+
+    & svg path{
+      fill: v.$text-dark !important
+    }
+
+    & .header{
+      &__dark-toggle{
+        background-color: v.$base;
+      }
+
+      &__hero{
+        img{
+          box-shadow: 0px 0px 0px 4px v.$base, 0px 0px 0px 8px v.$primary;
+        }
+      }
+
+      &__links{
+        .dark-btn {
+          background-color: v.$base;
+          color: v.$text-dark;
+        }
+      }
+    }
+
+    & .content{
+      &__tab-buttons{
+        background-color: v.$base;
+
+        button{
+          color: v.$text-dark;
+        }
+
+        .switch{
+          background-color: v.$bg-color;
+        }
+      }
+
+      &__grid{
+        .text{
+          background-color: v.$base !important;
+          color: v.$text-dark;
+
+          h3{
+            color: v.$primary !important;
+          }
+        }
+      }
+    }
+  }
+
   &::-webkit-scrollbar {
     background-color: darken(v.$bg-color, $amount: 3%);
   }
@@ -105,13 +169,14 @@ a {
     &__dark-toggle {
       width: 48px;
       height: 48px;
-      background-color: v.$base;
+      background-color: v.$light;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-top: 20px;
       margin-bottom: 30px;
+      cursor: pointer;
 
       & svg {
         width: 25px;
@@ -131,7 +196,7 @@ a {
         border-radius: 50%;
         margin-bottom: 48px;
         display: flex;
-        box-shadow: 0px 0px 0px 4px v.$base, 0px 0px 0px 8px v.$primary;
+        box-shadow: 0px 0px 0px 4px v.$light, 0px 0px 0px 8px v.$primary;
       }
 
       .info {
@@ -186,7 +251,7 @@ a {
       align-items: center;
       justify-content: center;
       gap: 9px;
-      background-color: v.$base;
+      background-color: v.$light;
       padding: 10px;
       border-radius: v.$borderRadius;
       position: relative;
@@ -201,7 +266,7 @@ a {
         position: absolute;
         width: f.rem(158);
         height: f.rem(44);
-        background-color: v.$bg-color;
+        background-color: v.$btn-light;
         border-radius: v.$borderRadius;
         transition: 0.3s;
         transform: translate3d(-84px, 0px, 0px);
@@ -250,14 +315,14 @@ a {
             position: absolute;
             bottom: 11px;
             left: -20px;
-            background-color: transparentize(v.$base, $amount: 0.01);
+            background-color: darken(v.$light, 17%);
             transform: rotate(-3deg);
             padding: 5px 30px;
             overflow: hidden;
             text-align: center;
 
             h3 {
-              color: v.$primary;
+              color: v.$heading-light;
               text-transform: capitalize;
             }
           }
