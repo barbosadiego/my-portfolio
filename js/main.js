@@ -23,7 +23,7 @@ if (items.length && buttons.length && switchButton) {
 
 // switch dark-mode
 const btn = document.querySelector('[data-darkmode]');
-const bodyEl = document.querySelector('body')
+const bodyEl = document.querySelector('body');
 
 if (btn) {
   btn.addEventListener('click', () => {
@@ -33,9 +33,9 @@ if (btn) {
   });
 }
 
-function handleDark(){
-  const state = bodyEl.classList.contains('dark')
-  localStorage.darkmode = state
+function handleDark() {
+  const state = bodyEl.classList.contains('dark');
+  localStorage.darkmode = state;
 }
 
 function checkDark() {
@@ -52,5 +52,20 @@ checkDark();
 //footer date
 const dateEl = document.querySelector('[data-time]');
 const atualDate = new Date().getFullYear();
-dateEl.innerHTML = atualDate
+dateEl.innerHTML = atualDate;
 
+//content filter
+
+const filters = document.querySelectorAll('[data-filter]');
+filters[0].classList.add('active');
+
+function handleFilter(e, index) {
+  console.log(e.target.dataset.filter, index);
+  filters.forEach((filter) => filter.classList.remove('active'));
+  filters[index].classList.add('active');
+  // filters.forEach((filter)=> )
+}
+
+filters.forEach((filter, index) => {
+  filter.addEventListener('click', (e) => handleFilter(e, index));
+});

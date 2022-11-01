@@ -34,7 +34,7 @@ p {
   color: v.$text-light;
 }
 
-svg path{
+svg path {
   fill: v.$text-light !important;
 }
 
@@ -51,7 +51,7 @@ a {
 }
 
 ul,
-li{
+li {
   list-style: none;
 }
 
@@ -86,7 +86,7 @@ a {
   font-family: 'Poppins', sans-serif;
   color: v.$heading-light;
   padding: 10px;
-  transition: .3s;
+  transition: 0.3s;
 
   &::-webkit-scrollbar {
     background-color: v.$light;
@@ -94,7 +94,7 @@ a {
   &::-webkit-scrollbar-thumb {
     background-color: darken($color: v.$light, $amount: 20%);
     border-radius: 5px;
-    
+
     &:hover {
       background-color: darken(v.$light, 30%);
     }
@@ -102,32 +102,32 @@ a {
   @media screen and (min-width: 768px) {
     padding: 10px 30px;
   }
-  
+
   //dark mode
-  &.dark{
+  &.dark {
     color: v.$heading-dark;
     background-color: v.$bg-color;
 
-    & p{
+    & p {
       color: v.$text-dark;
     }
 
-    & svg path{
-      fill: v.$text-dark !important
+    & svg path {
+      fill: v.$text-dark !important;
     }
 
-    & .header{
-      &__dark-toggle{
+    & .header {
+      &__dark-toggle {
         background-color: v.$base;
       }
 
-      &__hero{
-        img{
+      &__hero {
+        img {
           box-shadow: 0px 0px 0px 4px v.$base, 0px 0px 0px 8px v.$primary;
         }
       }
 
-      &__links{
+      &__links {
         .dark-btn {
           background-color: v.$base;
           color: v.$text-dark;
@@ -135,25 +135,25 @@ a {
       }
     }
 
-    & .content{
-      &__tab-buttons{
+    & .content {
+      &__tab-buttons {
         background-color: v.$base;
 
-        button{
+        button {
           color: v.$text-dark;
         }
 
-        .switch{
+        .switch {
           background-color: v.$bg-color;
         }
       }
 
-      &__grid{
-        .text{
+      &__grid {
+        .text {
           background-color: v.$base !important;
           color: v.$text-dark;
 
-          h3{
+          h3 {
             color: v.$primary !important;
           }
         }
@@ -166,7 +166,7 @@ a {
     &::-webkit-scrollbar-thumb {
       background-color: v.$base;
       border-radius: 5px;
-      
+
       &:hover {
         background-color: darken(v.$base, 3%);
       }
@@ -289,10 +289,25 @@ a {
       }
     }
 
+    &__filter {
+      display: flex;
+      gap: 1rem;
+
+      li {
+        background-color: v.$bg-color;
+        padding: 0.7rem 1rem;
+        border-radius: v.$borderRadius;
+        cursor: pointer;
+        &.active {
+          background-color: v.$base;
+        }
+      }
+    }
+
     &__grid {
       overflow: hidden;
 
-      .portfolio{
+      .portfolio {
         display: grid;
         grid-template-columns: 1fr;
         gap: 30px;
@@ -313,7 +328,7 @@ a {
           transform: translate3d(0px, 0px, 0px);
         }
 
-        .item{
+        .item {
           overflow: hidden;
           position: relative;
           border-radius: v.$borderRadius;
@@ -396,7 +411,7 @@ a {
       text-align: center;
     }
 
-    .credits{
+    .credits {
       display: block;
       color: v.$text-light;
       text-align: center;

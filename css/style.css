@@ -249,6 +249,19 @@ a {
 .js body .content__tab-buttons .switch.active {
   transform: translate3d(84px, 0px, 0px);
 }
+.js body .content__filter {
+  display: flex;
+  gap: 1rem;
+}
+.js body .content__filter li {
+  background-color: #0C151D;
+  padding: 0.7rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.js body .content__filter li.active {
+  background-color: #142637;
+}
 .js body .content__grid {
   overflow: hidden;
 }
