@@ -7,6 +7,9 @@ if (items.length && buttons.length && switchButton) {
   buttons[0].classList.add('active');
 
   function aciveTab(index) {
+    const filter = document.getElementById('filter');
+    filter.classList.toggle('hidden');
+
     switchButton.classList.toggle('active');
 
     items.forEach((item) => item.classList.remove('active'));
@@ -55,16 +58,25 @@ const atualDate = new Date().getFullYear();
 dateEl.innerHTML = atualDate;
 
 //content filter
-
 const filters = document.querySelectorAll('[data-filter]');
 filters[0].classList.add('active');
 
 function handleFilter(e, index) {
-  console.log(e.target.dataset.filter, index);
+  const filter = e.target.dataset.filter;
   filters.forEach((filter) => filter.classList.remove('active'));
   filters[index].classList.add('active');
-  // filters.forEach((filter)=> )
+  filterType(filter);
 }
+
+function filterType(type) {
+  if (type === 'all') return false;
+  const typeItens = [...document.querySelectorAll('[data-type]')];
+  typeItens.forEach((item) => item.classList.add('hide'));
+  const filteredItens = typeItens.filter((item) => item.dataset.type === type);
+  filteredItens.forEach((item) => item.classList.remove('hide'));
+}
+
+filterType('all');
 
 filters.forEach((filter, index) => {
   filter.addEventListener('click', (e) => handleFilter(e, index));

@@ -253,6 +253,9 @@ a {
   display: flex;
   gap: 1rem;
 }
+.js body .content__filter.hidden {
+  display: none;
+}
 .js body .content__filter li {
   background-color: #0C151D;
   padding: 0.7rem 1rem;
@@ -292,6 +295,9 @@ a {
   overflow: hidden;
   position: relative;
   border-radius: 5px;
+}
+.js body .content__grid .portfolio .item.hide {
+  display: none;
 }
 .js body .content__grid .portfolio .item img {
   border-radius: 5px;

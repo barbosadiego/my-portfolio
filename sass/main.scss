@@ -292,6 +292,9 @@ a {
     &__filter {
       display: flex;
       gap: 1rem;
+      &.hidden {
+        display: none;
+      }
 
       li {
         background-color: v.$bg-color;
@@ -332,6 +335,9 @@ a {
           overflow: hidden;
           position: relative;
           border-radius: v.$borderRadius;
+          &.hide {
+            display: none;
+          }
 
           img {
             border-radius: v.$borderRadius;
