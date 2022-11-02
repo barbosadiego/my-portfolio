@@ -128,6 +128,13 @@ a {
 .js body.dark .content__tab-buttons .switch {
   background-color: #0C151D;
 }
+.js body.dark .content__filter li {
+  background-color: #0C151D;
+}
+.js body.dark .content__filter li.active {
+  background-color: #142637;
+  box-shadow: 0 0 0 2px #f9d640;
+}
 .js body.dark .content__grid .text {
   background-color: #142637 !important;
   color: #A3ABB2;
@@ -257,13 +264,14 @@ a {
   display: none;
 }
 .js body .content__filter li {
-  background-color: #0C151D;
+  background-color: #E5E5E5;
   padding: 0.7rem 1rem;
   border-radius: 5px;
   cursor: pointer;
 }
 .js body .content__filter li.active {
-  background-color: #142637;
+  background-color: #D7D7D7;
+  box-shadow: 0 0 0px 2px #ffffff;
 }
 .js body .content__grid {
   overflow: hidden;

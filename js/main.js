@@ -1,16 +1,16 @@
-//tab navigation
+// tab navigation
 import tabNav from './tabNav.js';
 // dark-mode
 import darkThene from './darkTheme.js';
-//content filter
+// content filter
 import typeFilter from './typeFilter.js';
 
-//init
+// init
 tabNav();
 darkThene();
 typeFilter();
 
-//footer date
+// footer date
 const dateEl = document.querySelector('[data-time]');
 const atualDate = new Date().getFullYear();
 dateEl.innerHTML = atualDate;

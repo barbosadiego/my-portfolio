@@ -148,6 +148,16 @@ a {
         }
       }
 
+      &__filter {
+        li {
+          background-color: v.$bg-color;
+          &.active {
+            background-color: v.$base;
+            box-shadow: 0 0 0 2px v.$primary;
+          }
+        }
+      }
+
       &__grid {
         .text {
           background-color: v.$base !important;
@@ -297,12 +307,13 @@ a {
       }
 
       li {
-        background-color: v.$bg-color;
+        background-color: v.$bg-color-light;
         padding: 0.7rem 1rem;
         border-radius: v.$borderRadius;
         cursor: pointer;
         &.active {
-          background-color: v.$base;
+          background-color: v.$btn-light;
+          box-shadow: 0 0 0px 2px v.$light;
         }
       }
     }
