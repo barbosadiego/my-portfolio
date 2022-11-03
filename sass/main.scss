@@ -313,6 +313,7 @@ a {
       visibility: visible;
       opacity: 1;
       &.hidden {
+        height: 0px;
         opacity: 0;
         visibility: hidden;
         transform: translate3d(-50px, 0px, 0px);

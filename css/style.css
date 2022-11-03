@@ -273,6 +273,7 @@ a {
   opacity: 1;
 }
 .js body .content__filter.hidden {
+  height: 0px;
   opacity: 0;
   visibility: hidden;
   transform: translate3d(-50px, 0px, 0px);
